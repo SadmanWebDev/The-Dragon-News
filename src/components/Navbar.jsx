@@ -1,6 +1,6 @@
 import React from "react";
-import user from '../assets/user.png';
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
+import { RiAccountCircle2Fill, RiAccountCircle2Line } from "react-icons/ri";
 const Navbar = () => {
   return (
     <div className="flex justify-between">
@@ -11,8 +11,10 @@ const Navbar = () => {
         <NavLink to="/career">Career</NavLink>
       </div>
       <div className="flex gap-3">
-        <img src={user} alt="" />
-        <button className="btn btn-primary px-10">Login</button>
+        <RiAccountCircle2Line className="text-primary" size={45} />
+        <Link to="/auth/login" className="btn btn-primary px-10">
+          Login
+        </Link>
       </div>
     </div>
   );
